@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 public class CharMatrix
 {
@@ -11,18 +11,17 @@ public class CharMatrix
         matrix = new char[size, size];
     }
 
-    // Одновимірний індексатор:
     public string this[int diagonal]
     {
         get
         {
             string result = "";
-            if (diagonal == 0) // головна діагональ
+            if (diagonal == 0) 
             {
                 for (int i = 0; i < size; i++)
                     result += matrix[i, i];
             }
-            else if (diagonal == 1) // побічна діагональ
+            else if (diagonal == 1) 
             {
                 for (int i = 0; i < size; i++)
                     result += matrix[i, size - 1 - i];
@@ -35,7 +34,7 @@ public class CharMatrix
         }
     }
 
-    // Властивість: кількість голосних у всьому масиві
+    
     public int VowelCount
     {
         get
@@ -51,14 +50,12 @@ public class CharMatrix
         }
     }
 
-    // Метод заповнення символом
     public void SetElement(int row, int col, char value)
     {
         if (row >= 0 && row < size && col >= 0 && col < size)
             matrix[row, col] = value;
     }
 
-    // Метод виведення матриці
     public void Print()
     {
         for (int i = 0; i < size; i++)
