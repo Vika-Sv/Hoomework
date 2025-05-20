@@ -34,7 +34,6 @@ public class CharMatrix
         }
     }
 
-    
     public int VowelCount
     {
         get
